@@ -46,17 +46,17 @@
     </div>
 
     <script>
-      var countdownDate = new Date("July 10, 2022  18:00:00").getTime(); // Change the date to your launch date.
-      var x = setInterval(function () {
-        var now = new Date().getTime();
-        var distance = countdownDate - now;
+      let countdownDate = new Date("July 10, 2022  18:00:00").getTime(); // Change the date to your launch date.
+      let x = setInterval(function () {
+        let now = new Date().getTime();
+        let distance = countdownDate - now;
 
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor(
+        let days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        let hours = Math.floor(
           (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
         );
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        let minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        let seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
         document.getElementById("days").innerHTML = days;
         document.getElementById("hours").innerHTML = hours;
