@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .container {
@@ -41,9 +43,7 @@
     margin-bottom: auto;
 }
 body {    
-    background-image: url(/assets/development.jpg);
-    background-size: cover;
-    background-position: center;
+    background-image: linear-gradient(#7F7FD5, #91B9FF);
 }
 
 @media only screen and (max-width: 1125px) {
