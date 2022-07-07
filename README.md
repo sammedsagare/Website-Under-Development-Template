@@ -11,6 +11,7 @@ This is a *Website under Development* template that I created with HTML, CSS, an
 - Date and time countdown
 
 ## **Installation**
+
 **Clone the repository**
 
 ```cmd
@@ -18,8 +19,10 @@ git clone https://github.com/sammedsagare/Website-Under-Development-Template
 ```
 
 ## **Editing**
-Change the website title, add a logo (if desired), and change the date of launch to match your final launch date in the `index.html` file.
 
+- In `index.html`, change `countdownDate` to the date of launch.
+- Change the website title
+- Add a logo (if desired)
 
 ## **Development**
 
@@ -31,4 +34,4 @@ Open a pull request, and I'll look into it!
 
 ### *Support*
 
-You can contact me via [Twitter](https://twitter.com/sammedsagare_) or Discord ( !sam#8985 ).
+You can contact me via [Twitter](https://twitter.com/sammedsagare_) or [Discord](https://discord.com/users/508865773360381952)(!sam#8985).
