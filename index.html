@@ -23,7 +23,7 @@
 
       <div class="content">
         <p>Website is under development.</p>
-        <h1>We're launching soon👀</h1>
+        <h1>We're launching soon!</h1>
         <div class="launch-time">
           <div>
             <p id="days">00</p>
@@ -46,29 +46,33 @@
     </div>
 
     <script>
-      var countdownDate = new Date("July 10, 2022  18:00:00").getTime(); // Change the date to your launch date.
-      var x = setInterval(function () {
-        var now = new Date().getTime();
-        var distance = countdownDate - now;
+      const countdownDate = new Date("July 6, 2022  22:23:00").getTime(); // Change the date to your launch date.
+      const x = setInterval(function () {
+        const now = new Date().getTime();
 
-        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-        var hours = Math.floor(
-          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
-        );
-        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+        const distance = countdownDate - now;
 
-        document.getElementById("days").innerHTML = days;
-        document.getElementById("hours").innerHTML = hours;
-        document.getElementById("minutes").innerHTML = minutes;
-        document.getElementById("seconds").innerHTML = seconds;
+        const timeMetaArray = ["days", "hours", "minutes", "seconds"];
 
         if (distance < 0) {
           clearInterval(x);
-          document.getElementById("days").innerHTML = "00";
-          document.getElementById("hours").innerHTML = "00";
-          document.getElementById("minutes").innerHTML = "00";
-          document.getElementById("seconds").innerHTML = "00";
+
+          for (let el of timeMetaArray) {
+            document.getElementById(el).innerHTML = "00";
+          }
+          return;
+        }
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor(
+          (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+        );
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        const countdownVarArray = [days, hours, minutes, seconds];
+
+        for (let [i, el] of timeMetaArray.entries()) {
+          document.getElementById(el).innerHTML = countdownVarArray[i];
         }
       }, 1000);
     </script>
