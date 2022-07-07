@@ -48,8 +48,7 @@ body {
 
 @media only screen and (max-width: 1125px) {
     body {
-      background:none;
-      background-color: black;
+        background-image: linear-gradient( #e34329, #000);
      }
     .container {
         font-size: 15px;
